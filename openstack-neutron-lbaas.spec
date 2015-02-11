@@ -104,7 +104,8 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}-agent.ser
 
 
 %files
-%doc AUTHORS CONTRIBUTING.rst LICENSE README.rst
+%license LICENSE
+%doc AUTHORS CONTRIBUTING.rst README.rst
 %{_bindir}/%{servicename}-agent
 %{_unitdir}/%{servicename}-agent.service
 %{_datarootdir}/neutron/rootwrap/lbaas-haproxy.filters
