@@ -103,6 +103,9 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}-agent.ser
 # Install dist conf
 install -p -D -m 640 %{SOURCE2} %{buildroot}%{_datadir}/neutron/%{servicename}-dist.conf
 
+# Create configuration directory that can be populated by users with custom *.conf files
+mkdir -p %{buildroot}/%{_sysconfdir}/neutron/conf.d/%{servicename}-agent
+
 
 %post
 %systemd_post %{servicename}-agent.service
@@ -126,6 +129,8 @@ install -p -D -m 640 %{SOURCE2} %{buildroot}%{_datadir}/neutron/%{servicename}-d
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/lbaas_agent.ini
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/neutron_lbaas.conf
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/services_lbaas.conf
+%dir %{_sysconfdir}/neutron/conf.d
+%dir %{_sysconfdir}/neutron/conf.d/%{servicename}-agent
 %attr(-, root, neutron) %{_datadir}/neutron/%{servicename}-dist.conf
 
 
