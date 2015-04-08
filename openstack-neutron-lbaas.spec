@@ -106,6 +106,10 @@ install -p -D -m 640 %{SOURCE2} %{buildroot}%{_datadir}/neutron/%{servicename}-d
 # Create configuration directory that can be populated by users with custom *.conf files
 mkdir -p %{buildroot}/%{_sysconfdir}/neutron/conf.d/%{servicename}-agent
 
+# Make sure neutron-server loads new configuration file
+mkdir -p %{buildroot}/%{_datadir}/neutron/server
+ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/server/%{modulename}.conf
+
 
 %post
 %systemd_post %{servicename}-agent.service
@@ -132,6 +136,7 @@ mkdir -p %{buildroot}/%{_sysconfdir}/neutron/conf.d/%{servicename}-agent
 %dir %{_sysconfdir}/neutron/conf.d
 %dir %{_sysconfdir}/neutron/conf.d/%{servicename}-agent
 %attr(-, root, neutron) %{_datadir}/neutron/%{servicename}-dist.conf
+%{_datadir}/neutron/server/%{modulename}.conf
 
 
 %files -n python-%{servicename}
