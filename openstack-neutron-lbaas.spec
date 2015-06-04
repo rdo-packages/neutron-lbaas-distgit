@@ -1,3 +1,4 @@
+%global release_name kilo
 %global modulename neutron_lbaas
 %global servicename neutron-lbaas
 %global type LBaaS
