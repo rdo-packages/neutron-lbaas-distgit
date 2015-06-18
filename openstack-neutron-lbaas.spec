@@ -124,14 +124,17 @@ ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/
 
 %post
 %systemd_post %{servicename}-agent.service
+%systemd_post %{servicename}v2-agent.service
 
 
 %preun
 %systemd_preun %{servicename}-agent.service
+%systemd_preun %{servicename}v2-agent.service
 
 
 %postun
 %systemd_postun_with_restart %{servicename}-agent.service
+%systemd_postun_with_restart %{servicename}v2-agent.service
 
 
 %files
