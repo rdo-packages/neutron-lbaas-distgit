@@ -2,25 +2,26 @@
 %global servicename neutron-lbaas
 %global type LBaaS
 
-%global milestone .0rc1
+%global release_name liberty
+%global milestone .0rc2
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           openstack-%{servicename}
 Version:        7.0.0
-Release:        0.2%{?milestone}%{?dist}
+Release:        0.3%{?milestone}%{?dist}
 Epoch:          1
 Summary:        Openstack Networking %{type} plugin
 
 License:        ASL 2.0
 URL:            http://launchpad.net/neutron/
-Source0:        http://launchpad.net/%{servicename}/%{release_name}/%{release_name}-rc1/+download/%{servicename}-%{upstream_version}.tar.gz
+Source0:        http://launchpad.net/neutron/%{release_name}/%{release_name}-rc2/+download/%{servicename}-%{upstream_version}.tar.gz
 Source1:        %{servicename}-agent.service
 Source2:        %{servicename}v2-agent.service
 Source3:        %{servicename}-dist.conf
 
 #
-# patches_base=7.0.0.0rc1
+# patches_base=7.0.0.0rc2
 #
 
 BuildArch:      noarch
@@ -174,6 +175,9 @@ ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/
 
 
 %changelog
+* Mon Oct 12 2015 Alan Pevec <alan.pevec@redhat.com> 1:7.0.0-0.3.0rc2
+- Update to upstream 7.0.0.0rc2
+
 * Thu Oct 01 2015 Ihar Hrachyshka <ihrachys@redhat.com> 1:7.0.0-0.2.0rc1.el7
 - Update to upstream 7.0.0.0rc1
 
