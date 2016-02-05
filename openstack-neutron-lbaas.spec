@@ -18,7 +18,7 @@ Source3:        %{servicename}-dist.conf
 BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-barbicanclient
-BuildRequires:  python-neutron >= %{epoch}:%{version}
+BuildRequires:  python-neutron >= 1:%{version}
 BuildRequires:  python-pbr
 BuildRequires:  python-pyasn1
 BuildRequires:  python-pyasn1-modules
@@ -27,7 +27,7 @@ BuildRequires:  systemd-units
 BuildRequires:	git
 
 Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
-Requires:       openstack-neutron >= %{epoch}:%{version}
+Requires:       openstack-neutron >= 1:%{version}
 
 %description
 This is a %{type} service plugin for Openstack Neutron (Networking) service.
@@ -37,7 +37,7 @@ This is a %{type} service plugin for Openstack Neutron (Networking) service.
 Summary:        Neutron %{type} Python libraries
 Group:          Applications/System
 
-Requires:       python-neutron >= %{epoch}:%{version}
+Requires:       python-neutron >= 1:%{version}
 Requires:       python-alembic >= 0.7.2
 Requires:       python-barbicanclient >= 3.0.1
 Requires:       python-eventlet
