@@ -19,6 +19,7 @@ BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-barbicanclient
 BuildRequires:  python-neutron >= 1:%{version}
+BuildRequires:  python-neutron-lib
 BuildRequires:  python-pbr
 BuildRequires:  python-pyasn1
 BuildRequires:  python-pyasn1-modules
@@ -28,6 +29,7 @@ BuildRequires:	git
 
 Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
 Requires:       openstack-neutron >= 1:%{version}
+Requires:       python-neutron-lib
 
 %description
 This is a %{type} service plugin for Openstack Neutron (Networking) service.
