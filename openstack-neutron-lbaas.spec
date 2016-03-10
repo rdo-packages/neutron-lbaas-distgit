@@ -26,6 +26,8 @@ BuildRequires:  python-pyasn1-modules
 BuildRequires:  python-setuptools
 BuildRequires:  systemd-units
 BuildRequires:	git
+# Test deps
+BuildRequires:  python-cryptography
 
 Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
 Requires:       openstack-neutron >= 1:%{version}
