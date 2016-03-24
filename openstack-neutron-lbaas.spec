@@ -1,16 +1,20 @@
+%define milestone .0rc1
 %global modulename neutron_lbaas
 %global servicename neutron-lbaas
 %global type LBaaS
 
+
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 Name:           openstack-%{servicename}
-Version:        XXX
-Release:        XXX%{?dist}
+Version:        8.0.0
+Release:        0.1%{?milestone}%{?dist}
 Epoch:          1
 Summary:        Openstack Networking %{type} plugin
 
 License:        ASL 2.0
 URL:            http://launchpad.net/neutron/
-Source0:        http://tarballs.openstack.org/%{servicename}/%{servicename}-master.tar.gz
+Source0:        http://tarballs.openstack.org/%{servicename}/%{servicename}-%{version}%{?milestone}.tar.gz
 Source1:        %{servicename}-agent.service
 Source2:        %{servicename}v2-agent.service
 Source3:        %{servicename}-dist.conf
@@ -187,3 +191,5 @@ ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/
 
 
 %changelog
+* Thu Mar 24 2016 RDO <rdo-list@redhat.com> 8.0.0-0.1.0rc1
+- RC1 Rebuild for Mitaka rc1
