@@ -21,7 +21,7 @@ Source3:        %{servicename}-dist.conf
 
 BuildArch:      noarch
 BuildRequires:  python2-devel
-BuildRequires:  python-barbicanclient
+BuildRequires:  python-barbicanclient >= 4.0.0
 BuildRequires:  python-neutron >= %{min_neutron_version}
 BuildRequires:  python-neutron-lib
 BuildRequires:  python-pbr
@@ -35,7 +35,6 @@ BuildRequires:  python-cryptography
 
 Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
 Requires:       openstack-neutron >= %{min_neutron_version}
-Requires:       python-neutron-lib
 
 %description
 This is a %{type} service plugin for Openstack Neutron (Networking) service.
@@ -46,22 +45,9 @@ Summary:        Neutron %{type} Python libraries
 Group:          Applications/System
 
 Requires:       python-neutron >= %{min_neutron_version}
-Requires:       python-alembic >= 0.7.2
-Requires:       python-barbicanclient >= 3.0.1
-Requires:       python-eventlet
-Requires:       python-netaddr >= 0.7.12
-Requires:       python-oslo-config >= 2:1.9.3
-Requires:       python-oslo-db >= 1.7.0
-Requires:       python-oslo-log >= 1.0.0
-Requires:       python-oslo-messaging >= 1.8.0
-Requires:       python-oslo-serialization >= 1.4.0
-Requires:       python-oslo-utils >= 1.4.0
-Requires:       python-pbr
+Requires:       python-barbicanclient >= 4.0.0
 Requires:       python-pyasn1
 Requires:       python-pyasn1-modules
-Requires:       python-requests
-Requires:       python-six
-Requires:       python-sqlalchemy >= 0.9.7
 Requires:       pyOpenSSL
 
 
