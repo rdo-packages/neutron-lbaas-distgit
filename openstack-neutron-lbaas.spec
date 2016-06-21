@@ -6,13 +6,13 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           openstack-%{servicename}
-Version:        2015.1.0
-Release:        3%{?dist}
+Version:        2015.1.4
+Release:        1%{?dist}
 Summary:        Openstack Networking %{type} plugin
 
 License:        ASL 2.0
 URL:            http://launchpad.net/neutron/
-Source0:        http://launchpad.net/neutron/%{release_name}/%{version}/+download/%{servicename}-%{upstream_version}.tar.gz
+Source0:        http://tarballs.openstack.org/%{servicename}/%{servicename}-%{version}.tar.gz
 
 Source1:        %{servicename}-agent.service
 Source2:        %{servicename}v2-agent.service
@@ -169,3 +169,5 @@ ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/
 
 
 %changelog
+* Wed Jun 22 2016 Alan Pevec <alan.pevec@redhat.com> 2015.1.4-1
+- Update to 2015.1.4
