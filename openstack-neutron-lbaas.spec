@@ -12,7 +12,6 @@ Summary:        Openstack Networking %{type} plugin
 License:        ASL 2.0
 URL:            http://launchpad.net/neutron/
 Source0:        http://tarballs.openstack.org/%{servicename}/%{servicename}-master.tar.gz
-Source1:        %{servicename}-agent.service
 Source2:        %{servicename}v2-agent.service
 Source3:        %{servicename}-dist.conf
 
@@ -129,14 +128,12 @@ install -d -m 755 %{buildroot}%{_sysconfdir}/neutron
 mv etc/*.ini etc/*.conf %{buildroot}%{_sysconfdir}/neutron
 
 # Install systemd units
-install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/%{servicename}-agent.service
 install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}/%{servicename}v2-agent.service
 
 # Install dist conf
 install -p -D -m 640 %{SOURCE3} %{buildroot}%{_datadir}/neutron/%{servicename}-dist.conf
 
 # Create configuration directories that can be populated by users with custom *.conf files
-mkdir -p %{buildroot}/%{_sysconfdir}/neutron/conf.d/%{servicename}-agent
 mkdir -p %{buildroot}/%{_sysconfdir}/neutron/conf.d/%{servicename}v2-agent
 
 # Make sure neutron-server loads new configuration file
@@ -145,33 +142,27 @@ ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/
 
 
 %post
-%systemd_post %{servicename}-agent.service
 %systemd_post %{servicename}v2-agent.service
 
 
 %preun
-%systemd_preun %{servicename}-agent.service
 %systemd_preun %{servicename}v2-agent.service
 
 
 %postun
-%systemd_postun_with_restart %{servicename}-agent.service
 %systemd_postun_with_restart %{servicename}v2-agent.service
 
 
 %files
 %license LICENSE
 %doc AUTHORS CONTRIBUTING.rst README.rst
-%{_bindir}/%{servicename}-agent
 %{_bindir}/%{servicename}v2-agent
-%{_unitdir}/%{servicename}-agent.service
 %{_unitdir}/%{servicename}v2-agent.service
 %{_datarootdir}/neutron/rootwrap/lbaas-haproxy.filters
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/lbaas_agent.ini
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/neutron_lbaas.conf
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/services_lbaas.conf
 %dir %{_sysconfdir}/neutron/conf.d
-%dir %{_sysconfdir}/neutron/conf.d/%{servicename}-agent
 %dir %{_sysconfdir}/neutron/conf.d/%{servicename}v2-agent
 %attr(-, root, neutron) %{_datadir}/neutron/%{servicename}-dist.conf
 %{_datadir}/neutron/server/%{modulename}.conf
