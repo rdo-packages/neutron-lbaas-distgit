@@ -32,7 +32,7 @@ BuildRequires:  python-cryptography
 
 Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
 Requires:       openstack-neutron >= %{min_neutron_version}
-Requires:       python-neutron-lib
+Requires:       python-neutron-lib >= 0.4.0
 
 %description
 This is a %{type} service plugin for Openstack Neutron (Networking) service.
@@ -43,22 +43,26 @@ Summary:        Neutron %{type} Python libraries
 Group:          Applications/System
 
 Requires:       python-neutron >= %{min_neutron_version}
-Requires:       python-alembic >= 0.7.2
-Requires:       python-barbicanclient >= 3.0.1
+Requires:       python-alembic >= 0.8.4
+Requires:       python-barbicanclient >= 4.0.0
 Requires:       python-eventlet
+Requires:       python-keystoneauth1 >= 2.10.0
 Requires:       python-netaddr >= 0.7.12
-Requires:       python-oslo-config >= 2:1.9.3
-Requires:       python-oslo-db >= 1.7.0
-Requires:       python-oslo-log >= 1.0.0
-Requires:       python-oslo-messaging >= 1.8.0
-Requires:       python-oslo-serialization >= 1.4.0
-Requires:       python-oslo-utils >= 1.4.0
+Requires:       python-oslo-config >= 2:3.14.0
+Requires:       python-oslo-db >= 4.10.0
+Requires:       python-oslo-log >= 1.14.0
+Requires:       python-oslo-messaging >= 5.2.0
+Requires:       python-oslo-serialization >= 1.10.0
+Requires:       python-oslo-service >= 1.10.0
+Requires:       python-oslo-reports >= 0.6.0
+Requires:       python-oslo-utils >= 3.16.0
 Requires:       python-pbr
 Requires:       python-pyasn1
 Requires:       python-pyasn1-modules
 Requires:       python-requests
-Requires:       python-six
-Requires:       python-sqlalchemy >= 0.9.7
+Requires:       python-six >= 1.9.0
+Requires:       python-sqlalchemy >= 1.0.10
+Requires:       python-stevedore >= 1.16.0
 Requires:       pyOpenSSL
 
 
