@@ -1,3 +1,4 @@
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global modulename neutron_lbaas
 %global servicename neutron-lbaas
 %global type LBaaS
