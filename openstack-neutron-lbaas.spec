@@ -35,6 +35,9 @@ Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
 Requires:       openstack-neutron >= %{min_neutron_version}
 Requires:       python-neutron-lib >= 0.4.0
 
+# This is not a hard dependency, but it's required by the default lbaas driver
+Requires:       haproxy
+
 %description
 This is a %{type} service plugin for Openstack Neutron (Networking) service.
 
