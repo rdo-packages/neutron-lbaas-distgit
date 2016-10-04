@@ -29,6 +29,9 @@ BuildRequires:	git
 Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
 Requires:       openstack-neutron >= %{epoch}:%{version}
 
+# This is not a hard dependency, but it's required by the default lbaas driver
+Requires:       haproxy
+
 %description
 This is a %{type} service plugin for Openstack Neutron (Networking) service.
 
