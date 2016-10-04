@@ -22,6 +22,30 @@
       "revId": "6eaa27bb6a7e64722976a808fec197437681d92f",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dacfb570_4dba9ce2",
+        "filename": "openstack-neutron-lbaas.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2016-10-04T22:38:35Z",
+      "side": 1,
+      "message": "CentOS baseOS is not built in CBS\n\nand haproxy is EL7 baseOS, public reference is https://fedoraproject.org/wiki/EPEL/epel7",
+      "parentUuid": "dacfb570_96b03af6",
+      "range": {
+        "startLine": 38,
+        "startChar": 16,
+        "endLine": 38,
+        "endChar": 23
+      },
+      "revId": "6eaa27bb6a7e64722976a808fec197437681d92f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
