@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dacfb570_96b03af6",
+        "filename": "openstack-neutron-lbaas.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 172
+      },
+      "writtenOn": "2016-10-04T12:31:03Z",
+      "side": 1,
+      "message": "There seems not to be such package for CentOS - https://cbs.centos.org/koji/search?match\u003dglob\u0026type\u003dpackage\u0026terms\u003dhaproxy\n\nShould we first package it?",
+      "range": {
+        "startLine": 38,
+        "startChar": 16,
+        "endLine": 38,
+        "endChar": 23
+      },
+      "revId": "6eaa27bb6a7e64722976a808fec197437681d92f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
