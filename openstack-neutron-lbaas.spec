@@ -184,3 +184,4 @@ ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/
 
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/neutron-lbaas/commit/?id=415dbc7f36e08c5351513386b263c03c0e7188ba
