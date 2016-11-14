@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5adbc538_f536d3e6",
+        "filename": "openstack-neutron-lbaas.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 104
+      },
+      "writtenOn": "2016-11-14T12:49:13Z",
+      "side": 1,
+      "message": "I believe the right thing to do is to depend on python-neutron-tests, that will transitively pull anything that is used by neutron.tests.* namespace.\n\nLater, when we decouple neutron_lbaas.tests.* code from neutron.tests.*, we may revisit it.",
+      "revId": "bf998d58a932ca4408013d870750a11895c4a11b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
