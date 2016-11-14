@@ -67,6 +67,7 @@ Requires:       python-six >= 1.9.0
 Requires:       python-sqlalchemy >= 1.0.10
 Requires:       python-stevedore >= 1.16.0
 Requires:       pyOpenSSL
+Requires:       testscenarios >= 0.5.0
 
 
 %description -n python-%{servicename}
