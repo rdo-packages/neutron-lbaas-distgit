@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5adbc538_7a9ab015",
+        "filename": "openstack-neutron-lbaas.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 125
+      },
+      "writtenOn": "2016-11-14T09:28:59Z",
+      "side": 1,
+      "message": "blank line",
+      "revId": "fc5ec77963c112d263f9a68a23ed85a4c5726086",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adbc538_9a9f7c03",
+        "filename": "openstack-neutron-lbaas.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 125
+      },
+      "writtenOn": "2016-11-14T09:28:59Z",
+      "side": 1,
+      "message": "why specifically 0.5.0?\n\nI think we have RPM only for 0.4.0",
+      "range": {
+        "startLine": 84,
+        "startChar": 39,
+        "endLine": 84,
+        "endChar": 45
+      },
+      "revId": "fc5ec77963c112d263f9a68a23ed85a4c5726086",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
