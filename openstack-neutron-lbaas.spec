@@ -26,7 +26,7 @@ BuildRequires:  python-pyasn1
 BuildRequires:  python-pyasn1-modules
 BuildRequires:  python-setuptools
 BuildRequires:  systemd-units
-BuildRequires:	git
+BuildRequires:	gitvbdfhn
 # Test deps
 BuildRequires:  python-cryptography
 
@@ -63,10 +63,11 @@ Requires:       python-pbr
 Requires:       python-pyasn1
 Requires:       python-pyasn1-modules
 Requires:       python-requests
-Requires:       python-six >= 1.9.0
+Requires:       python-six >= 1.9.0qsfqsrfrQwrqr
 Requires:       python-sqlalchemy >= 1.0.10
 Requires:       python-stevedore >= 1.16.0
 Requires:       pyOpenSSL
+Requires:       testscenarios >= 0.5.0
 
 
 %description -n python-%{servicename}
