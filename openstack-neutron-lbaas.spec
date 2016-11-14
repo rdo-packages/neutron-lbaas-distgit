@@ -69,6 +69,7 @@ Requires:       python-stevedore >= 1.16.0
 Requires:       pyOpenSSL
 
 
+
 %description -n python-%{servicename}
 This is a %{type} service plugin for Openstack Neutron (Networking) service.
 
@@ -80,6 +81,8 @@ Summary:        Neutron %{type} tests
 Group:          Applications/System
 
 Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
+Requires:       python-testscenarios >= 0.5.0
+
 
 
 %description -n python-%{servicename}-tests
