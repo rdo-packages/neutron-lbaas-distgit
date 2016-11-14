@@ -39,6 +39,47 @@
       "revId": "fc5ec77963c112d263f9a68a23ed85a4c5726086",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adbc538_fa85e0ad",
+        "filename": "openstack-neutron-lbaas.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2016-11-14T09:33:12Z",
+      "side": 1,
+      "message": "I second that.\nSee: https://github.com/openstack/neutron-lbaas/blob/master/test-requirements.txt#L18",
+      "parentUuid": "5adbc538_9a9f7c03",
+      "range": {
+        "startLine": 84,
+        "startChar": 39,
+        "endLine": 84,
+        "endChar": 45
+      },
+      "revId": "fc5ec77963c112d263f9a68a23ed85a4c5726086",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adbc538_1a936cfb",
+        "filename": "openstack-neutron-lbaas.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2016-11-14T09:33:12Z",
+      "side": 1,
+      "message": "blank line",
+      "revId": "fc5ec77963c112d263f9a68a23ed85a4c5726086",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
