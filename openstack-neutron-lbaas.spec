@@ -80,6 +80,7 @@ Summary:        Neutron %{type} tests
 Group:          Applications/System
 
 Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
+Requires:       python-testscenarios >= 0.4
 
 
 %description -n python-%{servicename}-tests
