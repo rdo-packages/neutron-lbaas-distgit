@@ -4,6 +4,7 @@
 %global type LBaaS
 %global min_neutron_version 1:8.0.0
 
+
 Name:           openstack-%{servicename}
 Version:        XXX
 Release:        XXX%{?dist}
@@ -125,16 +126,6 @@ export PBR_VERSION=%{version}
 export SKIP_PIP_INSTALL=1
 %{__python2} setup.py install -O1 --skip-build --root %{buildroot}
 
-# Create fake egg-info for the tempest plugin
-egg_path=%{buildroot}%{python2_sitelib}/%{modulename}-*.egg-info
-tempest_egg_path=%{buildroot}%{python2_sitelib}/%{modulename}_tests.egg-info
-mkdir $tempest_egg_path
-grep "tempest\|Tempest" %{modulename}.egg-info/entry_points.txt >$tempest_egg_path/entry_points.txt
-cp -r $egg_path/PKG-INFO $tempest_egg_path
-sed -i "s/%{servicename}/%{modulename}_tests/g" $tempest_egg_path/PKG-INFO
-# Remove any reference to Tempest plugin in the main package entry point
-sed -i "/tempest\|Tempest/d" $egg_path/entry_points.txt
-
 # Move rootwrap files to proper location
 install -d -m 755 %{buildroot}%{_datarootdir}/neutron/rootwrap
 mv %{buildroot}/usr/etc/neutron/rootwrap.d/*.filters %{buildroot}%{_datarootdir}/neutron/rootwrap
@@ -158,6 +149,7 @@ mkdir -p %{buildroot}/%{_sysconfdir}/neutron/conf.d/%{servicename}v2-agent
 mkdir -p %{buildroot}/%{_datadir}/neutron/server
 ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/server/%{modulename}.conf
 
+%py2_entrypoint %{modulename} %{servicename}
 
 %post
 %systemd_post %{servicename}v2-agent.service
