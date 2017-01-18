@@ -17,6 +17,7 @@ Source2:        %{servicename}v2-agent.service
 Source3:        %{servicename}-dist.conf
 
 BuildArch:      noarch
+BuildRequires:  openstack-macros
 BuildRequires:  python2-devel
 BuildRequires:  python-barbicanclient
 BuildRequires:  python-neutron >= %{min_neutron_version}
