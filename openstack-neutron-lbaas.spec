@@ -5,7 +5,7 @@
 %global min_neutron_version 1:8.0.0
 
 Name:           openstack-%{servicename}
-Version:        9.1.0
+Version:        9.2.0
 Release:        1%{?dist}
 Epoch:          1
 Summary:        Openstack Networking %{type} plugin
@@ -187,6 +187,9 @@ ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/
 
 
 %changelog
+* Thu Feb 02 2017 Alfredo Moralejo <amoralej@redhat.com> 1:9.2.0-1
+- Update to 9.2.0
+
 * Fri Nov 04 2016 Alfredo Moralejo <amoralej@redhat.com> 1:9.1.0-1
 - Update to 9.1.0
 
