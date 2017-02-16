@@ -1,3 +1,4 @@
+%global milestone .0rc1
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global modulename neutron_lbaas
 %global servicename neutron-lbaas
@@ -5,14 +6,18 @@
 %global min_neutron_version 1:8.0.0
 
 Name:           openstack-%{servicename}
-Version:        XXX
-Release:        XXX%{?dist}
+Version:        10.0.0
+Release:        0.1%{?milestone}%{?dist}
 Epoch:          1
 Summary:        Openstack Networking %{type} plugin
 
 License:        ASL 2.0
 URL:            http://launchpad.net/neutron/
 Source0:        https://tarballs.openstack.org/%{servicename}/%{servicename}-%{upstream_version}.tar.gz
+#
+# patches_base=10.0.0.0rc1
+#
+
 Source2:        %{servicename}v2-agent.service
 Source3:        %{servicename}-dist.conf
 
@@ -190,3 +195,6 @@ ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/
 %{python2_sitelib}/%{modulename}_tests.egg-info
 
 %changelog
+* Thu Feb 16 2017 Alfredo Moralejo <amoralej@redhat.com> 1:10.0.0-0.1.0rc1
+- Update to 10.0.0.0rc1
+
