@@ -22,7 +22,7 @@ BuildRequires:  python2-devel
 BuildRequires:  python-barbicanclient
 BuildRequires:  python-neutron >= %{min_neutron_version}
 BuildRequires:  python-neutron-lib
-BuildRequires:  python-pbr
+BuildRequires:  python-pbr >= 2.0.0
 BuildRequires:  python-pyasn1
 BuildRequires:  python-pyasn1-modules
 BuildRequires:  python-setuptools
@@ -33,7 +33,7 @@ BuildRequires:  python-cryptography
 
 Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
 Requires:       openstack-neutron >= %{min_neutron_version}
-Requires:       python-neutron-lib >= 1.1.0
+Requires:       python-neutron-lib >= 1.4.0
 
 # This is not a hard dependency, but it's required by the default lbaas driver
 Requires:       haproxy
@@ -47,28 +47,29 @@ Summary:        Neutron %{type} Python libraries
 Group:          Applications/System
 
 Requires:       python-neutron >= %{min_neutron_version}
-Requires:       python-alembic >= 0.8.4
+# alembic is >= 0.8.10 in upstream g-r.txt but we ship 0.8.7 only
+Requires:       python-alembic >= 0.8.7
 Requires:       python-barbicanclient >= 4.0.0
-Requires:       python-cryptography
-Requires:       python-eventlet
+Requires:       python-cryptography >= 1.6
+Requires:       python-eventlet >= 0.18.2
 Requires:       python-keystoneauth1 >= 2.18.0
-Requires:       python-netaddr >= 0.7.12
-Requires:       python-oslo-config >= 2:3.14.0
-Requires:       python-oslo-db >= 4.15.0
-Requires:       python-oslo-log >= 3.11.0
-Requires:       python-oslo-messaging >= 5.14.0
+Requires:       python-netaddr >= 0.7.13
+Requires:       python-oslo-config >= 2:3.22.0
+Requires:       python-oslo-db >= 4.19.0
+Requires:       python-oslo-log >= 3.22.0
+Requires:       python-oslo-messaging >= 5.19.0
 Requires:       python-oslo-serialization >= 1.10.0
 Requires:       python-oslo-service >= 1.10.0
 Requires:       python-oslo-reports >= 0.6.0
-Requires:       python-oslo-utils >= 3.18.0
-Requires:       python-pbr
+Requires:       python-oslo-utils >= 3.20.0
+Requires:       python-pbr >= 2.0.0
 Requires:       python-pyasn1
 Requires:       python-pyasn1-modules
-Requires:       python-requests
+Requires:       python-requests >= 2.10.0
 Requires:       python-six >= 1.9.0
 Requires:       python-sqlalchemy >= 1.0.10
-Requires:       python-stevedore >= 1.17.1
-Requires:       pyOpenSSL
+Requires:       python-stevedore >= 1.20.0
+Requires:       pyOpenSSL >= 0.14
 
 
 %description -n python-%{servicename}
