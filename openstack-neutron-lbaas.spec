@@ -2,7 +2,9 @@
 %global modulename neutron_lbaas
 %global servicename neutron-lbaas
 %global type LBaaS
-%global min_neutron_version 1:8.0.0
+
+%define major_version %(echo %{version} | awk 'BEGIN { FS=\".\"}; {print $1}')
+%define next_version $((%{major_version} + 1))
 
 Name:           openstack-%{servicename}
 Version:        XXX
@@ -17,10 +19,12 @@ Source2:        %{servicename}v2-agent.service
 Source3:        %{servicename}-dist.conf
 
 BuildArch:      noarch
+BuildRequires:  gawk
 BuildRequires:  openstack-macros
 BuildRequires:  python2-devel
 BuildRequires:  python-barbicanclient
-BuildRequires:  python-neutron >= %{min_neutron_version}
+BuildRequires:  python-neutron >= %{major_version}
+BuildRequires:  python-neutron < %{next_version}
 BuildRequires:  python-neutron-lib
 BuildRequires:  python-pbr >= 2.0.0
 BuildRequires:  python-pyasn1
@@ -32,7 +36,7 @@ BuildRequires:	git
 BuildRequires:  python-cryptography
 
 Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
-Requires:       openstack-neutron >= %{min_neutron_version}
+Requires:       openstack-neutron >= %{major_version}
 Requires:       python-neutron-lib >= 1.4.0
 
 # This is not a hard dependency, but it's required by the default lbaas driver
@@ -46,7 +50,8 @@ This is a %{type} service plugin for Openstack Neutron (Networking) service.
 Summary:        Neutron %{type} Python libraries
 Group:          Applications/System
 
-Requires:       python-neutron >= %{min_neutron_version}
+Requires:       python-neutron >= %{major_version}
+Requires:       python-neutron < %{next_version}
 Requires:       python-alembic >= 0.8.10
 Requires:       python-barbicanclient >= 4.0.0
 Requires:       python-cryptography >= 1.6
