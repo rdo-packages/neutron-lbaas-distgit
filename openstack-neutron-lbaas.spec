@@ -7,7 +7,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           openstack-%{servicename}
-Version:        8.3.0
+Version:        8.4.0
 Release:        1%{?dist}
 Epoch:          1
 Summary:        Openstack Networking %{type} plugin
@@ -180,6 +180,9 @@ ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/
 
 
 %changelog
+* Tue May 23 2017 Alfredo Moralejo <amoralej@redhat.com> 1:8.4.0-1
+- Update to 8.4.0
+
 * Thu Oct 13 2016 Alan Pevec <alan.pevec@redhat.com> 1:8.3.0-1
 - Update to 8.3.0
 
