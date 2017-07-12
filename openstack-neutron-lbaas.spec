@@ -93,8 +93,6 @@ Requires:       python-fixtures >= 3.0.0
 Requires:       python-mock >= 2.0
 Requires:       python-subunit >= 0.0.18
 Requires:       python-requests-mock >= 1.1
-Requires:       python-sphinx >= 1.1.3
-Requires:       python-oslo-sphinx >= 4.7.0
 Requires:       python-oslo-concurrency >= 3.8.0
 Requires:       python-oslotest >= 1.10.0
 Requires:       python-testrepository >= 0.0.18
@@ -103,7 +101,6 @@ Requires:       python-testtools >= 1.4.0
 Requires:       python-testscenarios >= 0.4
 Requires:       python-webob >= 1.7.1
 Requires:       python-webtest >= 2.0
-Requires:       python-reno >= 1.8.0
 Requires:       python-tempest >= 14.0.0
 
 
