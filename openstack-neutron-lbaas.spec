@@ -100,7 +100,6 @@ Requires:       python-testresources >= 0.2.4
 Requires:       python-testtools >= 1.4.0
 Requires:       python-testscenarios >= 0.4
 Requires:       python-webob >= 1.7.1
-Requires:       python-webtest >= 2.0
 Requires:       python-tempest >= 14.0.0
 
 
