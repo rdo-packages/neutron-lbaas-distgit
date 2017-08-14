@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a890539_244bb65a",
+        "filename": "openstack-neutron-lbaas.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 172
+      },
+      "writtenOn": "2017-08-14T14:39:35Z",
+      "side": 1,
+      "message": "Looks like this line fails on CBS",
+      "revId": "e886262cba9e4e1b692c7da72d80e7e1402292ae",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
