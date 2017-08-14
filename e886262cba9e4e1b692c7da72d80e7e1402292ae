@@ -16,6 +16,24 @@
       "revId": "e886262cba9e4e1b692c7da72d80e7e1402292ae",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a890539_c4cf52af",
+        "filename": "openstack-neutron-lbaas.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 104
+      },
+      "writtenOn": "2017-08-14T15:11:22Z",
+      "side": 1,
+      "message": "That\u0027s because the commit that introduced the new plugin is not included in the latest tarball.",
+      "parentUuid": "5a890539_244bb65a",
+      "revId": "e886262cba9e4e1b692c7da72d80e7e1402292ae",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
