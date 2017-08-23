@@ -38,7 +38,6 @@ BuildRequires:  python-cryptography
 Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
 Requires:       openstack-neutron >= %{epoch}:%{major_version}
 Conflicts:      openstack-neutron >= %{epoch}:%{next_version}
-Requires:       python-neutron-lib >= 1.4.0
 
 # This is not a hard dependency, but it's required by the default lbaas driver
 Requires:       haproxy
@@ -58,12 +57,13 @@ Requires:       python-alembic >= 0.8.7
 Requires:       python-barbicanclient >= 4.0.0
 Requires:       python-cryptography >= 1.6
 Requires:       python-eventlet >= 0.18.2
-Requires:       python-keystoneauth1 >= 2.18.0
+Requires:       python-keystoneauth1 >= 3.1.0
 Requires:       python-netaddr >= 0.7.13
-Requires:       python-oslo-config >= 2:3.22.0
-Requires:       python-oslo-db >= 4.19.0
+Requires:       python-neutron-lib >= 1.9.0
+Requires:       python-oslo-config >= 2:4.0.0
+Requires:       python-oslo-db >= 4.24.0
 Requires:       python-oslo-log >= 3.22.0
-Requires:       python-oslo-messaging >= 5.19.0
+Requires:       python-oslo-messaging >= 5.24.2
 Requires:       python-oslo-serialization >= 1.10.0
 Requires:       python-oslo-service >= 1.10.0
 Requires:       python-oslo-reports >= 0.6.0
