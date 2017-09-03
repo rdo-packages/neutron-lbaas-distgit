@@ -6,6 +6,10 @@
 %define major_version %(echo %{version} | awk 'BEGIN { FS=\".\"}; {print $1}')
 %define next_version %(echo $((%{major_version} + 1)))
 
+%global common_desc \
+This is a %{type} service plugin for Openstack Neutron (Networking) service.
+
+
 Name:           openstack-%{servicename}
 Version:        XXX
 Release:        XXX%{?dist}
@@ -43,7 +47,7 @@ Conflicts:      openstack-neutron >= %{epoch}:%{next_version}
 Requires:       haproxy
 
 %description
-This is a %{type} service plugin for Openstack Neutron (Networking) service.
+%{common_desc}
 
 
 %package -n python-%{servicename}
@@ -79,7 +83,7 @@ Requires:       pyOpenSSL >= 0.14
 
 
 %description -n python-%{servicename}
-This is a %{type} service plugin for Openstack Neutron (Networking) service.
+%{common_desc}
 
 This package contains the Neutron %{type} Python library.
 
@@ -104,7 +108,7 @@ Requires:       python-tempest >= 14.0.0
 
 
 %description -n python-%{servicename}-tests
-This is a %{type} service plugin for Openstack Neutron (Networking) service.
+%{common_desc}
 
 This package contains Neutron %{type} test files.
 
