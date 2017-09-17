@@ -35,6 +35,7 @@ BuildRequires:  python-pyasn1-modules
 BuildRequires:  python-setuptools
 BuildRequires:  systemd-units
 BuildRequires:	git
+BuildRequires:  openstack-macros
 # Test deps
 BuildRequires:  python-cryptography
 
@@ -116,7 +117,7 @@ This package contains Neutron %{type} test files.
 %autosetup -n %{servicename}-%{upstream_version} -S git
 
 # Let's handle dependencies ourselves
-rm -f requirements.txt
+%py_req_cleanup
 
 # Kill egg-info in order to generate new SOURCES.txt
 rm -rf neutron_lbaas.egg-info
