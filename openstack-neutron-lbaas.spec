@@ -119,7 +119,7 @@ This package contains Neutron %{type} test files.
 %py_req_cleanup
 
 # Kill egg-info in order to generate new SOURCES.txt
-rm -rf neutron_lbaas.egg-info
+rm -rf %{modulename}.egg-info
 
 %build
 export PBR_VERSION=%{version}
@@ -193,7 +193,7 @@ ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/
 %{_unitdir}/%{servicename}v2-agent.service
 %{_datarootdir}/neutron/rootwrap/lbaas-haproxy.filters
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/lbaas_agent.ini
-%config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/neutron_lbaas.conf
+%config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/%{modulename}.conf
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/services_lbaas.conf
 %dir %{_sysconfdir}/neutron/conf.d
 %dir %{_sysconfdir}/neutron/conf.d/%{servicename}v2-agent
