@@ -55,8 +55,7 @@ Group:          Applications/System
 
 Requires:       python-neutron >= %{epoch}:%{major_version}
 Conflicts:      python-neutron >= %{epoch}:%{next_version}
-# alembic is >= 0.8.10 in upstream g-r.txt but we ship 0.8.7 only
-Requires:       python-alembic >= 0.8.7
+Requires:       python-alembic >= 0.8.10
 Requires:       python-barbicanclient >= 4.0.0
 Requires:       python-cryptography >= 1.6
 Requires:       python-eventlet >= 0.18.2
