@@ -36,7 +36,7 @@ BuildRequires:  python-pbr >= 2.0.0
 BuildRequires:  python-pyasn1
 BuildRequires:  python-pyasn1-modules
 BuildRequires:  python-setuptools
-BuildRequires:  systemd-units
+BuildRequires:  systemd
 BuildRequires:	git
 # Test deps
 BuildRequires:  python-cryptography
