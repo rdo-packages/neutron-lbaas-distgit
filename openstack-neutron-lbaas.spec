@@ -28,18 +28,18 @@ BuildArch:      noarch
 BuildRequires:  gawk
 BuildRequires:  openstack-macros
 BuildRequires:  python2-devel
-BuildRequires:  python-barbicanclient
+BuildRequires:  python2-barbicanclient
 BuildRequires:  python-neutron >= %{epoch}:%{major_version}
 BuildConflicts: python-neutron >= %{epoch}:%{next_version}
 BuildRequires:  python-neutron-lib
-BuildRequires:  python-pbr >= 2.0.0
-BuildRequires:  python-pyasn1
-BuildRequires:  python-pyasn1-modules
-BuildRequires:  python-setuptools
+BuildRequires:  python2-pbr >= 2.0.0
+BuildRequires:  python2-pyasn1
+BuildRequires:  python2-pyasn1-modules
+BuildRequires:  python2-setuptools
 BuildRequires:  systemd
 BuildRequires:	git
 # Test deps
-BuildRequires:  python-cryptography
+BuildRequires:  python2-cryptography
 
 Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
 Requires:       openstack-neutron >= %{epoch}:%{major_version}
@@ -58,29 +58,29 @@ Group:          Applications/System
 
 Requires:       python-neutron >= %{epoch}:%{major_version}
 Conflicts:      python-neutron >= %{epoch}:%{next_version}
-Requires:       python-alembic >= 0.8.10
-Requires:       python-barbicanclient >= 4.0.0
-Requires:       python-cryptography >= 1.6
-Requires:       python-eventlet >= 0.18.2
-Requires:       python-keystoneauth1 >= 3.1.0
-Requires:       python-netaddr >= 0.7.13
-Requires:       python-neutron-lib >= 1.9.0
-Requires:       python-oslo-config >= 2:4.0.0
-Requires:       python-oslo-db >= 4.24.0
-Requires:       python-oslo-log >= 3.22.0
-Requires:       python-oslo-messaging >= 5.24.2
-Requires:       python-oslo-serialization >= 1.10.0
-Requires:       python-oslo-service >= 1.10.0
-Requires:       python-oslo-reports >= 0.6.0
-Requires:       python-oslo-utils >= 3.20.0
-Requires:       python-pbr >= 2.0.0
-Requires:       python-pyasn1
-Requires:       python-pyasn1-modules
-Requires:       python-requests >= 2.10.0
-Requires:       python-six >= 1.9.0
-Requires:       python-sqlalchemy >= 1.0.10
-Requires:       python-stevedore >= 1.20.0
-Requires:       pyOpenSSL >= 0.14
+Requires:       python2-alembic >= 0.8.10
+Requires:       python2-barbicanclient >= 4.0.0
+Requires:       python2-cryptography >= 1.7.2
+Requires:       python2-eventlet >= 0.18.2
+Requires:       python2-keystoneauth1 >= 3.3.0
+Requires:       python2-netaddr >= 0.7.18
+Requires:       python-neutron-lib >= 1.13.0
+Requires:       python2-oslo-config >= 2:5.1.0
+Requires:       python2-oslo-db >= 4.27.0
+Requires:       python2-oslo-log >= 3.36.0
+Requires:       python2-oslo-messaging >= 5.29.0
+Requires:       python2-oslo-serialization >= 2.18.0
+Requires:       python2-oslo-service >= 1.24.0
+Requires:       python2-oslo-reports >= 1.18.0
+Requires:       python2-oslo-utils >= 3.33.0
+Requires:       python2-pbr >= 2.0.0
+Requires:       python2-pyasn1
+Requires:       python2-pyasn1-modules
+Requires:       python2-requests >= 2.14.2
+Requires:       python2-six >= 1.10.0
+Requires:       python2-sqlalchemy >= 1.0.10
+Requires:       python2-stevedore >= 1.20.0
+Requires:       python2-pyOpenSSL >= 16.2.0
 
 
 %description -n python-%{servicename}
@@ -94,18 +94,18 @@ Summary:        Neutron %{type} tests
 Group:          Applications/System
 
 Requires:       python-%{servicename} = %{epoch}:%{version}-%{release}
-Requires:       python-fixtures >= 3.0.0
-Requires:       python-mock >= 2.0
-Requires:       python-subunit >= 0.0.18
+Requires:       python2-fixtures >= 3.0.0
+Requires:       python2-mock >= 2.0
+Requires:       python2-subunit >= 0.0.18
 Requires:       python-requests-mock >= 1.1
-Requires:       python-oslo-concurrency >= 3.8.0
-Requires:       python-oslotest >= 1.10.0
-Requires:       python-testrepository >= 0.0.18
-Requires:       python-testresources >= 0.2.4
-Requires:       python-testtools >= 1.4.0
-Requires:       python-testscenarios >= 0.4
+Requires:       python2-oslo-concurrency >= 3.25.0
+Requires:       python2-oslotest >= 1.10.0
+Requires:       python2-testrepository >= 0.0.18
+Requires:       python2-testresources >= 0.2.4
+Requires:       python2-testtools >= 1.4.0
+Requires:       python2-testscenarios >= 0.4
 Requires:       python-webob >= 1.7.1
-Requires:       python-tempest >= 14.0.0
+Requires:       python2-tempest >= 14.0.0
 
 
 %description -n python-%{servicename}-tests
