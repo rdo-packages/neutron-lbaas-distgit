@@ -56,14 +56,15 @@ Group:          Applications/System
 Requires:       python-neutron >= %{epoch}:%{major_version}
 Conflicts:      python-neutron >= %{epoch}:%{next_version}
 Requires:       python2-alembic >= 0.8.10
-Requires:       python2-barbicanclient >= 4.0.0
-Requires:       python2-cryptography >= 1.7.2
+Requires:       python2-barbicanclient >= 4.5.2
+Requires:       python2-cryptography >= 2.1
 Requires:       python2-eventlet >= 0.18.2
-Requires:       python2-keystoneauth1 >= 3.3.0
+Requires:       python2-keystoneauth1 >= 3.4.0
 Requires:       python2-netaddr >= 0.7.18
-Requires:       python-neutron-lib >= 1.13.0
-Requires:       python2-oslo-config >= 2:5.1.0
+Requires:       python-neutron-lib >= 1.18.0
+Requires:       python2-oslo-config >= 2:5.2.0
 Requires:       python2-oslo-db >= 4.27.0
+Requires:       python2-oslo-i18n >= 3.15.3
 Requires:       python2-oslo-log >= 3.36.0
 Requires:       python2-oslo-messaging >= 5.29.0
 Requires:       python2-oslo-serialization >= 2.18.0
@@ -77,7 +78,7 @@ Requires:       python2-requests >= 2.14.2
 Requires:       python2-six >= 1.10.0
 Requires:       python2-sqlalchemy >= 1.0.10
 Requires:       python2-stevedore >= 1.20.0
-Requires:       python2-pyOpenSSL >= 16.2.0
+Requires:       python2-pyOpenSSL >= 17.1.0
 
 
 %description -n python-%{servicename}
