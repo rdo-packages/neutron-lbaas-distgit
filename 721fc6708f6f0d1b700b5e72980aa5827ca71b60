@@ -22,6 +22,30 @@
       "revId": "721fc6708f6f0d1b700b5e72980aa5827ca71b60",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_45753696",
+        "filename": "openstack-neutron-lbaas.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-10-01T10:31:27Z",
+      "side": 1,
+      "message": "iirc there was some discussion few days back on IRC regarding: getting rid of py2_entrypoint as tempest plugin are seperated and only few are left which will be converted soon.\n\nYes this is still used in following projects:-\n    openstack-glare_distro/openstack-glare.spec:%py2_entrypoint glare glare\n    openstack-neutron-fwaas_distro/openstack-neutron-fwaas.spec:%py2_entrypoint %{modulename} %{servicename}\n    openstack-neutron-lbaas_distro/openstack-neutron-lbaas.spec:%py2_entrypoint %{modulename} %{servicename}\n    openstack-neutron-vpnaas_distro/openstack-neutron-vpnaas.spec:%py2_entrypoint %{modulename} %{servicename}\n    openstack-octavia_distro/openstack-octavia.spec:%py2_entrypoint %{service} %{service}\n    python-networking-bgpvpn_distro/python-networking-bgpvpn.spec:%py2_entrypoint %{sname} %{pypi_name}\n    python-networking-cisco_distro/python-networking-cisco.spec:%py2_entrypoint %{srcname} %{package_name}\n    python-networking-sfc_distro/python-networking-sfc.spec:%py2_entrypoint %{module} %{pypi_name}",
+      "parentUuid": "9abe1de1_e55a0a2a",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 4
+      },
+      "revId": "721fc6708f6f0d1b700b5e72980aa5827ca71b60",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
