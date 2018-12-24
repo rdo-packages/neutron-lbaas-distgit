@@ -18,8 +18,6 @@
 %global common_desc \
 This is a %{type} service plugin for Openstack Neutron (Networking) service.
 
-%define major_version %(echo %{version} | awk 'BEGIN { FS=\".\"}; {print $1}')
-%define next_version %(echo $((%{major_version} + 1)))
 
 Name:           openstack-%{servicename}
 Version:        XXX
@@ -38,8 +36,7 @@ BuildRequires:  gawk
 BuildRequires:  openstack-macros
 BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-barbicanclient
-BuildRequires:  python%{pyver}-neutron >= %{epoch}:%{major_version}
-BuildConflicts: python%{pyver}-neutron >= %{epoch}:%{next_version}
+BuildRequires:  python%{pyver}-neutron >= %{epoch}:%{version}
 BuildRequires:  python%{pyver}-neutron-lib
 BuildRequires:  python%{pyver}-pbr >= 2.0.0
 BuildRequires:  python%{pyver}-pyasn1
@@ -51,8 +48,7 @@ BuildRequires:	git
 BuildRequires:  python%{pyver}-cryptography
 
 Requires:       python%{pyver}-%{servicename} = %{epoch}:%{version}-%{release}
-Requires:       openstack-neutron >= %{epoch}:%{major_version}
-Conflicts:      openstack-neutron >= %{epoch}:%{next_version}
+Requires:       openstack-neutron >= %{epoch}:%{version}
 
 # This is not a hard dependency, but it's required by the default lbaas driver
 Requires:       haproxy
@@ -66,8 +62,7 @@ Summary:        Neutron %{type} Python libraries
 %{?python_provide:%python_provide python%{pyver}-%{servicename}}
 Group:          Applications/System
 
-Requires:       python%{pyver}-neutron >= %{epoch}:%{major_version}
-Conflicts:      python%{pyver}-neutron >= %{epoch}:%{next_version}
+Requires:       python%{pyver}-neutron >= %{epoch}:%{version}
 Requires:       python%{pyver}-alembic >= 0.8.10
 Requires:       python%{pyver}-barbicanclient >= 4.5.2
 Requires:       python%{pyver}-cryptography >= 2.1
