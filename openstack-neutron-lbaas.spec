@@ -1,4 +1,3 @@
-%global milestone .0rc1
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global modulename neutron_lbaas
 %global servicename neutron-lbaas
@@ -22,15 +21,13 @@ This is a %{type} service plugin for Openstack Neutron (Networking) service.
 
 Name:           openstack-%{servicename}
 Version:        14.0.0
-Release:        0.1%{?milestone}%{?dist}
+Release:        1%{?dist}
 Epoch:          1
 Summary:        Openstack Networking %{type} plugin
 
 License:        ASL 2.0
 URL:            http://launchpad.net/neutron/
 Source0:        https://tarballs.openstack.org/%{servicename}/%{servicename}-%{upstream_version}.tar.gz
-#
-# patches_base=14.0.0.0rc1
 #
 
 Source2:        %{servicename}v2-agent.service
@@ -41,7 +38,7 @@ BuildRequires:  gawk
 BuildRequires:  openstack-macros
 BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-barbicanclient
-BuildRequires:  python%{pyver}-neutron >= %{epoch}:%{version}
+BuildRequires:  python%{pyver}-neutron >= 1:14.0.0
 BuildRequires:  python%{pyver}-neutron-lib
 BuildRequires:  python%{pyver}-pbr >= 2.0.0
 BuildRequires:  python%{pyver}-pyasn1
@@ -53,7 +50,7 @@ BuildRequires:	git
 BuildRequires:  python%{pyver}-cryptography
 
 Requires:       python%{pyver}-%{servicename} = %{epoch}:%{version}-%{release}
-Requires:       openstack-neutron >= %{epoch}:%{version}
+Requires:       openstack-neutron >= 1:14.0.0
 
 # This is not a hard dependency, but it's required by the default lbaas driver
 Requires:       haproxy
@@ -67,7 +64,7 @@ Summary:        Neutron %{type} Python libraries
 %{?python_provide:%python_provide python%{pyver}-%{servicename}}
 Group:          Applications/System
 
-Requires:       python%{pyver}-neutron >= %{epoch}:%{version}
+Requires:       python%{pyver}-neutron >= 1:14.0.0
 Requires:       python%{pyver}-alembic >= 0.8.10
 Requires:       python%{pyver}-barbicanclient >= 4.5.2
 Requires:       python%{pyver}-cryptography >= 2.1
@@ -236,6 +233,9 @@ ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/
 %{pyver_sitelib}/%{modulename}_tests.egg-info
 
 %changelog
+* Wed Apr 10 2019 RDO <dev@lists.rdoproject.org> 1:14.0.0-1
+- Update to 14.0.0
+
 * Fri Mar 22 2019 RDO <dev@lists.rdoproject.org> 1:14.0.0-0.1.0rc1
 - Update to 14.0.0.0rc1
 
