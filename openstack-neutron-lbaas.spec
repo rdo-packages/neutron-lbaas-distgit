@@ -231,3 +231,4 @@ ln -s %{_sysconfdir}/neutron/%{modulename}.conf %{buildroot}%{_datadir}/neutron/
 %{pyver_sitelib}/%{modulename}_tests.egg-info
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/neutron-lbaas/commit/?id=f8d023fbfe7a2957c5cfe504e9e28f2b5d91fdc1
